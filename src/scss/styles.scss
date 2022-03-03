@@ -46,3 +46,16 @@ main,
 footer {
   background-color: $brown;
 }
+
+@media screen and (max-width: 820px) {
+  .img {
+    display: none;
+  }
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+  header,
+  footer {
+    grid-template-columns: 1fr 1.7fr 1fr;
+  }
+}
