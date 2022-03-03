@@ -1,0 +1,65 @@
+main {
+  height: 100%;
+  @include grid-column;
+
+  .left_numbers {
+    grid-column: 1 / span 1;
+  }
+  .img {
+    grid-column: 2 / span 1;
+    background-image: url("http://10x19.co/staging/wp-content/uploads/2019/12/Gallagher_10-768x768.jpg");
+    background-size: cover;
+  }
+  .right_numbers {
+    grid-column: 3 span 1;
+  }
+  * {
+    width: 100%;
+    height: 100%;
+  }
+  .left_numbers,
+  .right_numbers {
+    @include grid-row;
+    grid-template-columns: 1fr;
+    background-color: $brown;
+    label {
+      background-color: white;
+      @include center;
+      font-weight: 600;
+      &:hover {
+        @include hover;
+      }
+    }
+  }
+}
+
+#img10:checked ~ main .img {
+  background-image: url("http://10x19.co/staging/wp-content/uploads/2019/12/Gallagher_10-768x768.jpg");
+}
+#img9:checked ~ main .img {
+  background-image: url("http://10x19.co/staging/wp-content/uploads/2019/11/ERM_9-768x768.jpg");
+}
+#img8:checked ~ main .img {
+  background-image: url("http://10x19.co/staging/wp-content/uploads/2019/12/Pecson_8-2-768x768.jpg");
+}
+#img7:checked ~ main .img {
+  background-image: url("http://10x19.co/staging/wp-content/uploads/2019/12/barry-7-768x768.jpg");
+}
+#img6:checked ~ main .img {
+  background-image: url("http://10x19.co/staging/wp-content/uploads/2019/12/Luor_6-1000x1000.jpg");
+}
+#img5:checked ~ main .img {
+  background-image: url("http://10x19.co/staging/wp-content/uploads/2019/12/Dickens_5-1000x1000.jpg");
+}
+#img4:checked ~ main .img {
+  background-image: url("http://10x19.co/staging/wp-content/uploads/2019/12/Pervorse_4-1000x1000.jpg");
+}
+#img3:checked ~ main .img {
+  background-image: url("http://10x19.co/staging/wp-content/uploads/2019/12/Voorheis_3-768x768.jpg");
+}
+#img2:checked ~ main .img {
+  background-image: url("http://10x19.co/staging/wp-content/uploads/2019/12/Perez_02-768x768.jpg");
+}
+#img1:checked ~ main .img {
+  background-image: url("http://10x19.co/staging/wp-content/uploads/2019/12/barry-1-768x768.jpg");
+}

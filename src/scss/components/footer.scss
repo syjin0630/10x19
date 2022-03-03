@@ -1,0 +1,25 @@
+footer {
+  height: 100%;
+  @include grid-column;
+  .text {
+    @include nowrap;
+    .transform {
+      height: 100%;
+      animation: 10s linear infinite reverse animation;
+      transform: translateX(-1000px);
+
+      span {
+        @include nowrap;
+        height: 100%;
+        @include center;
+        margin: 0 5px;
+      }
+    }
+  }
+}
+
+@keyframes animation {
+  100% {
+    transform: translateX(50%);
+  }
+}

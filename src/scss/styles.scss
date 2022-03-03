@@ -1,2 +1,48 @@
 @import "_mixin";
-@import "_variavles";
+@import "_variables";
+
+@import "components/header.scss";
+@import "components/main.scss";
+@import "components/footer.scss";
+
+body {
+  font-family: "Neue Haas Unica W01 Regular";
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 8fr 1fr;
+  gap: 1px;
+  * {
+    font-size: 21px;
+    line-height: 14.7px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: inherit;
+    background-color: white;
+    color: $brown;
+  }
+  input {
+    display: none;
+  }
+  header {
+    grid-row: 1 / span 1;
+  }
+  main {
+    grid-row: 2 / span 1;
+  }
+  footer {
+    grid-row: 3 / span 1;
+  }
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+body,
+header,
+main,
+footer {
+  background-color: $brown;
+}

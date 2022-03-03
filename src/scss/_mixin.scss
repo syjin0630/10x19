@@ -1,0 +1,28 @@
+@mixin grid-column {
+  display: grid;
+  grid-template-columns: 1fr 620px 1fr;
+  gap: 1px;
+}
+
+@mixin grid-row {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 1px;
+}
+
+@mixin nowrap {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin hover {
+  background-color: $brown;
+  color: white;
+  transition: $transition;
+}
